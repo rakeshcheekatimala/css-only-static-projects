@@ -1,0 +1,19 @@
+/* 
+	Animations 
+*/
+
+@keyframes moveInLeft {
+	0% {
+		transform: translate(-13rem);
+		opacity: 0;
+	}
+
+	70%{
+		transform: translate(3rem);
+	}
+
+	100% {
+		transform: translate(0px);
+		opacity: 1;
+	}
+}

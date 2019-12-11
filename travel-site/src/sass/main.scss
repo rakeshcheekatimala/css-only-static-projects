@@ -1,13 +1,16 @@
-/*
-COLORS:
-*/
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/variables";
 
-$color-primary: #55c57a;
-$color-primary-light:#7ed56f;
-$color-primary-dark:#28b485;
-$color-grey-dark:#777;
-$color-white:#fff;
-$color-black:#000;
+@import "base/animation";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+
+@import "layout/header";
+
 /*
 	Universal Selector for css reset for all browsers
 */
@@ -15,7 +18,7 @@ $color-black:#000;
 *,x::before,x::after {
 	margin:0;
 	padding:0;
-	box-sizing: border-box; /* change box model so that border is not considered in total height & total width calculation*/
+	
 }
 
 /* Application wise font definition */
@@ -25,133 +28,7 @@ html {
 }
 
 body {
-	font-family: "Lato",sans-serif;
-	font-weight: 400;
-	font-size: 1.6rem;
-	line-height: 1.7;
-	color: $color-grey-dark; 
-	padding: 30px;
-}
-
-header {
-	height: 95vh;
-	background-image: linear-gradient(
-		to right, 
-		rgba($color-primary-light,0.8),
-		rgba($color-primary-dark,0.8)),
-		url('../img/hero.jpg');
-	background-size: cover;
-	background-position: top;
-	clip-path: polygon(0 0,100% 0%,100% 75vh,0% 100%);
-	position: relative;
-
-	&__logo-box{
-		position: absolute;
-		left:4rem;
-		top:4rem;
-	}
-	
-	&__logo{
-		height: 3.5rem;
-	}
-	
-	&__text-box {
-		position: absolute;
-		left:50%;
-		top:50%;
-		transform: translate(-50%,-50%);
-		text-align: center;
-	}
+	box-sizing: border-box; /* change box model so that border is not considered in total height & total width calculation*/
 }
 
 
-
-.header-primary {
-	text-transform: uppercase;
-	color:$color-white;
-	margin-bottom: 6rem;
-
-	&--main {
-		display: block;
-		letter-spacing: 3rem;
-		font-size: 6rem;
-		font-weight: 400;
-		animation-name: moveInLeft;
-		animation-duration: 3s;
-	}
-	
-	&--sub{
-		display: block;
-		font-weight: 400;
-		font-size: 20px;
-		letter-spacing: 1.5rem;
-	}
-}
-
-/* 
-	Animations 
-*/
-
-@keyframes moveInLeft {
-	0% {
-		transform: translate(-13rem);
-		opacity: 0;
-	}
-
-	70%{
-		transform: translate(3rem);
-	}
-
-	100% {
-		transform: translate(0px);
-		opacity: 1;
-	}
-}
-
-.btn {
-	&:link,&:visited {
-		text-transform: uppercase;
-		text-decoration: none;
-		padding: 1.5rem 4rem;
-		display: inline-block;
-		position: relative;
-		border-radius: 3rem;	
-		transition: all .2s;
-	}
-	
-	&:hover{
-		box-shadow: 0 1rem 2rem rgba($color-black, 0.2); 
-		transform: translateY(-3px);
-		&::after {
-			transform: scale(1.5);
-			opacity: 0; /* fading somethingout */
-		}
-	}
-	
-	&:active{
-		box-shadow: 0px 0.5rem 1rem rgba($color-black,0.2);
-		transform: translateY(-1px);
-	}
-	
-	&--white{
-		background-color: $color-white;
-		color:$color-grey-dark;
-		&::after{
-			background-color:$color-white;
-		}
-	}
-	
-	&::after{
-		position: absolute;
-		content:'';
-		display:inline-block;
-		height:100%;
-		width:100%;
-		border-radius: 3rem;
-		left:0;
-		top:0;
-		z-index: -1;
-		transition: all .4s;
-	}
-
-}

@@ -1,0 +1,32 @@
+body{
+	font-family: "Lato",sans-serif;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 1.7;
+	color: $color-grey-dark; 
+	padding: 30px;
+}
+
+/* Heading related typography */
+
+.header-primary {
+	text-transform: uppercase;
+	color:$color-white;
+	margin-bottom: 6rem;
+
+	&--main {
+		display: block;
+		letter-spacing: 3rem;
+		font-size: 6rem;
+		font-weight: 400;
+		animation-name: moveInLeft;
+		animation-duration: 3s;
+	}
+	
+	&--sub{
+		display: block;
+		font-weight: 400;
+		font-size: 20px;
+		letter-spacing: 1.5rem;
+	}
+}
