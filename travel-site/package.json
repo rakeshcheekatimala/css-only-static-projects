@@ -1,0 +1,20 @@
+{
+	"name": "travel-site",
+	"version": "1.0.0",
+	"description": "A simple static web application for travels & adventures tours",
+	"main": "index.js",
+	"scripts": {
+		"compile:sass": "node-sass src/sass/main.scss src/css/style.css -w"
+	},
+	"keywords": [
+		"Static",
+		"Website",
+		"CSS"
+	],
+	"author": "Rakesh Cheekatimala",
+	"license": "ISC",
+	"dependencies": {},
+	"devDependencies": {
+		"node-sass": "^4.13.0"
+	}
+}
