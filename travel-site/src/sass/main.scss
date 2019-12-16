@@ -8,8 +8,13 @@
 @import "base/utilities";
 
 @import "components/button";
+@import "components/composition";
 
 @import "layout/header";
+
+@import "layout/grid";
+
+@import "pages/home";
 
 /*
 	Universal Selector for css reset for all browsers
@@ -18,7 +23,6 @@
 *,x::before,x::after {
 	margin:0;
 	padding:0;
-	
 }
 
 /* Application wise font definition */
@@ -30,5 +34,3 @@ html {
 body {
 	box-sizing: border-box; /* change box model so that border is not considered in total height & total width calculation*/
 }
-
-
