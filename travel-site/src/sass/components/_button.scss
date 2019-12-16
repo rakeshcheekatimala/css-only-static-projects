@@ -45,3 +45,26 @@
 	}
 
 }
+
+.btn-text{
+	&:link,&:visited {
+		font-size: $default-font-size;
+		color:$color-primary;
+		display: inline-block;
+		text-decoration: none;
+		border-bottom:1px solid $color-primary;
+		padding:3px;
+	}
+	&:hover {
+		background: $color-primary;
+		color:$color-white;
+		box-shadow: 0 1rem 2rem rgba($color-black, .015);
+		transform: translateY(-2px); // move up
+		transition: all 0.2s;//animation
+	}
+	&:active {
+		box-shadow: 0 1rem 2rem rgba($color-black, .015);
+		transform: translateY(0px); // move up
+	}
+	
+}
